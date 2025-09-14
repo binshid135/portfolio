@@ -1,4 +1,11 @@
+/* Import Google Font FIRST */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import "tailwindcss";
+
 
 :root {
   --background: #ffffff;
@@ -8,8 +15,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: 'Poppins', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +28,11 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Outline text effect for hero name */
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke: 2px #000; /* Black outline */
 }
