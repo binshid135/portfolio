@@ -1,10 +1,18 @@
 "use client"
 import { useState } from "react";
 import { JSX } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebookF,
+  faTwitter,
+  faInstagram,
+  faLinkedinIn,
+  faPinterestP,
+} from "@fortawesome/free-brands-svg-icons";
 
 // components/Navbar.tsx
 interface SocialLink {
-  icon: string;
+  icon: any;
   href: string;
 }
 
@@ -12,17 +20,18 @@ export default function Navbar(): JSX.Element {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const socialLinks: SocialLink[] = [
-    { icon: "fab fa-facebook-f", href: "#" },
-    { icon: "fab fa-twitter", href: "#" },
-    { icon: "fab fa-instagram", href: "#" },
-    { icon: "fab fa-linkedin-in", href: "#" },
-    { icon: "fab fa-pinterest-p", href: "#" },
+    { icon: faFacebookF, href: "#" },
+    { icon: faTwitter, href: "#" },
+    { icon: faInstagram, href: "#" },
+    { icon: faLinkedinIn, href: "#" },
+    { icon: faPinterestP, href: "#" },
   ];
 
   return (
     <nav className="flex justify-between items-center px-6 md:px-10 py-6 relative">
+      {/* Logo */}
       <div className="text-xl font-bold tracking-tight text-black">
-        Ahammed <br></br>Binsid.
+        Ahammed <br /> Binsid.
       </div>
 
       {/* Hamburger Icon */}
@@ -73,10 +82,10 @@ export default function Navbar(): JSX.Element {
       </ul>
 
       {/* Desktop Socials */}
-      <div className="md:flex gap-4 text-gray-600 text-lg">
+      <div className="hidden md:flex gap-4 text-gray-600 text-lg">
         {socialLinks.map((link, index) => (
           <a key={index} href={link.href}>
-            <i className={link.icon}></i>
+            <FontAwesomeIcon icon={link.icon} />
           </a>
         ))}
       </div>
@@ -125,7 +134,7 @@ export default function Navbar(): JSX.Element {
           <div className="flex gap-4 text-gray-600 text-lg">
             {socialLinks.map((link, index) => (
               <a key={index} href={link.href}>
-                <i className={link.icon}></i>
+                <FontAwesomeIcon icon={link.icon} />
               </a>
             ))}
           </div>
