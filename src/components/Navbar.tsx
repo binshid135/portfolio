@@ -73,7 +73,7 @@ export default function Navbar(): JSX.Element {
       </ul>
 
       {/* Desktop Socials */}
-      <div className="hidden md:flex gap-4 text-gray-600 text-lg">
+      <div className="md:flex gap-4 text-gray-600 text-lg">
         {socialLinks.map((link, index) => (
           <a key={index} href={link.href}>
             <i className={link.icon}></i>
