@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Stats from '../components/Stats';
 import Projects from '../components/Projects';
 import Footer from '../components/Footer';
+import MyExperiences from '@/components/MyExperiences';
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Header />
       <Stats />
       <Projects />
+      <MyExperiences />
       <Footer />
     </div>
   );

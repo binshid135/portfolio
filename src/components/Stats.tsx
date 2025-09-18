@@ -8,8 +8,8 @@ interface StatItem {
 
 export default function Stats(): JSX.Element {
   const stats: StatItem[] = [
-    { value: "120+", label: "Successful projects" },
-    { value: "10+", label: "Years of experience" },
+    { value: "10+", label: "Successful projects" },
+    { value: "1+", label: "Years of experience" },
     { value: "1000+", label: "Cups of coffee" },
   ];
 
