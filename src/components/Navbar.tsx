@@ -7,7 +7,7 @@ import {
   faTwitter,
   faInstagram,
   faLinkedinIn,
-  faPinterestP,
+    faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
 // components/Navbar.tsx
@@ -20,11 +20,11 @@ export default function Navbar(): JSX.Element {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const socialLinks: SocialLink[] = [
-    { icon: faFacebookF, href: "#" },
+    // { icon: faFacebookF, href: "#" },
     { icon: faTwitter, href: "#" },
     { icon: faInstagram, href: "#" },
     { icon: faLinkedinIn, href: "#" },
-    { icon: faPinterestP, href: "#" },
+    { icon:   faGithub, href: "#" },
   ];
 
   return (
