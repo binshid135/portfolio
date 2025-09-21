@@ -7,7 +7,7 @@ import {
   faTwitter,
   faInstagram,
   faLinkedinIn,
-    faGithub,
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
 // components/Navbar.tsx
@@ -24,7 +24,7 @@ export default function Navbar(): JSX.Element {
     { icon: faTwitter, href: "#" },
     { icon: faInstagram, href: "#" },
     { icon: faLinkedinIn, href: "#" },
-    { icon:   faGithub, href: "#" },
+    { icon: faGithub, href: "#" },
   ];
 
   return (
@@ -41,45 +41,43 @@ export default function Navbar(): JSX.Element {
         aria-label="Toggle menu"
       >
         <span
-          className={`block h-1 w-6 bg-black mb-1 transition-all ${
-            menuOpen ? "rotate-45 translate-y-2" : ""
-          }`}
+          className={`block h-1 w-6 bg-black mb-1 transition-all ${menuOpen ? "rotate-45 translate-y-2" : ""
+            }`}
         ></span>
         <span
-          className={`block h-1 w-6 bg-black mb-1 transition-all ${
-            menuOpen ? "opacity-0" : ""
-          }`}
+          className={`block h-1 w-6 bg-black mb-1 transition-all ${menuOpen ? "opacity-0" : ""
+            }`}
         ></span>
         <span
-          className={`block h-1 w-6 bg-black transition-all ${
-            menuOpen ? "-rotate-45 -translate-y-2" : ""
-          }`}
+          className={`block h-1 w-6 bg-black transition-all ${menuOpen ? "-rotate-45 -translate-y-2" : ""
+            }`}
         ></span>
       </button>
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex gap-8 text-gray-800 font-medium">
         <li>
-          <a href="#" className="hover:underline">
-            Portfolio
+          <a href="#about" className="hover:underline">
+            About
           </a>
         </li>
         <li>
-          <a href="#" className="hover:underline">
-            About me
+          <a href="#stats" className="hover:underline">
+            Stats
           </a>
         </li>
         <li>
-          <a href="#" className="hover:underline">
-            Reviews
-          </a>
-        </li>
-        <li>
-          <a href="#" className="hover:underline">
+          <a href="#projects" className="hover:underline">
             Projects
           </a>
         </li>
+        <li>
+          <a href="#experience" className="hover:underline">
+            Experience
+          </a>
+        </li>
       </ul>
+
 
       {/* Desktop Socials */}
       <div className="hidden md:flex gap-4 text-gray-600 text-lg">
@@ -95,42 +93,27 @@ export default function Navbar(): JSX.Element {
         <div className="absolute top-full left-0 w-full bg-white shadow-md z-20 flex flex-col items-center py-4 md:hidden animate-fade-in">
           <ul className="flex flex-col gap-4 text-gray-800 font-medium mb-4">
             <li>
-              <a
-                href="#"
-                className="hover:underline"
-                onClick={() => setMenuOpen(false)}
-              >
-                Portfolio
+              <a href="#about" onClick={() => setMenuOpen(false)}>
+                About
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="hover:underline"
-                onClick={() => setMenuOpen(false)}
-              >
-                About me
+              <a href="#stats" onClick={() => setMenuOpen(false)}>
+                Stats
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="hover:underline"
-                onClick={() => setMenuOpen(false)}
-              >
-                Reviews
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:underline"
-                onClick={() => setMenuOpen(false)}
-              >
+              <a href="#projects" onClick={() => setMenuOpen(false)}>
                 Projects
               </a>
             </li>
+            <li>
+              <a href="#experience" onClick={() => setMenuOpen(false)}>
+                Experience
+              </a>
+            </li>
           </ul>
+
           <div className="flex gap-4 text-gray-600 text-lg">
             {socialLinks.map((link, index) => (
               <a key={index} href={link.href}>

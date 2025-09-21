@@ -33,9 +33,9 @@ export default function Projects(): JSX.Element {
           Case studies <br className="hidden sm:inline" /> & projects
         </h2>
         <hr className="border-t-2 md:border-t-4 border-gray-300 mb-6 md:mb-8 w-full max-w-4xl mx-auto md:mx-0" />
-        <p className="text-gray-700 text-lg md:text-xl lg:text-2xl max-w-4xl mx-auto md:mx-0 leading-relaxed mb-8 md:mb-12">
+        {/* <p className="text-gray-700 text-lg md:text-xl lg:text-2xl max-w-4xl mx-auto md:mx-0 leading-relaxed mb-8 md:mb-12">
           Showcase your portfolio projects here with images, descriptions, and links.
-        </p>
+        </p> */}
       </div>
 
       {/* Projects List */}
