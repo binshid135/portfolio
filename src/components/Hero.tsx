@@ -19,9 +19,13 @@ export default function Hero(): JSX.Element {
           building scalable web and mobile applications with a strong focus
           on user experience and performance optimization.
         </p>
-        <button className="relative w-32 md:w-36 lg:w-40 xl:w-44 py-2 lg:py-3 xl:py-4 font-semibold text-sm md:text-base lg:text-lg text-black border border-black shadow-[4px_4px_0px_black] hover:bg-black hover:text-white transition-all duration-300 hover:shadow-[6px_6px_0px_rgba(0,0,0,0.3)]">
-          Hire ME
-        </button>
+        <a
+          href="mailto:ahmedbinshid@gmail.com"
+          className="relative w-32 md:w-36 lg:w-40 xl:w-44 py-2 lg:py-3 xl:py-4 font-semibold text-sm md:text-base lg:text-lg text-black border border-black shadow-[4px_4px_0px_black] hover:bg-black hover:text-white transition-all duration-300 hover:shadow-[6px_6px_0px_rgba(0,0,0,0.3)] text-center"
+        >
+          Hire Me
+        </a>
+
       </div>
 
       {/* Right */}

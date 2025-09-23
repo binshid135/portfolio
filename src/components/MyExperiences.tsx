@@ -40,9 +40,8 @@ const MyExperiences = () => (
       {experiences.map((exp, idx) => (
         <div
           key={idx}
-          className={`flex flex-col ${
-            idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-          } items-center gap-8`}
+          className={`flex flex-col ${idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+            } items-center gap-8`}
         >
           {/* Image with gradient border */}
           <div className="flex-1 w-full max-w-md">
@@ -86,9 +85,27 @@ const MyExperiences = () => (
 
     {/* Call to Action */}
     <div className="mt-20 text-center">
-      <p className="text-xl md:text-2xl font-semibold text-gray-800">
+      <p className="text-xl md:text-2xl font-semibold text-gray-800 mb-6">
         🚀 Open to exciting opportunities — let’s build something amazing together!
       </p>
+
+      {/* Contact Info */}
+      <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
+        <a
+          href="mailto:ahmedbinshid@gmail.com"
+          className="text-lg font-medium text-black hover:underline"
+        >
+          📧 ahmedbinshid@gmail.com
+        </a>
+        <a
+          href="tel:+971508493690"
+          className="text-lg font-medium text-black hover:underline"
+        >
+          📱 +971 50 849 3690
+        </a>
+      </div>
+
+      {/* Hire Me Button */}
       <a
         href="mailto:ahmedbinshid@gmail.com"
         className="mt-6 inline-block px-6 py-3 text-lg font-bold rounded-full bg-black text-white hover:bg-gray-800 transition"
@@ -96,6 +113,7 @@ const MyExperiences = () => (
         Hire Me →
       </a>
     </div>
+
   </section>
 );
 
