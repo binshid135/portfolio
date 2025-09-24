@@ -21,10 +21,10 @@ export default function Navbar(): JSX.Element {
 
   const socialLinks: SocialLink[] = [
     // { icon: faFacebookF, href: "#" },
-    { icon: faTwitter, href: "#" },
-    { icon: faInstagram, href: "#" },
-    { icon: faLinkedinIn, href: "#" },
-    { icon: faGithub, href: "#" },
+    // { icon: faTwitter, href: "#" },
+    // { icon: faInstagram, href: "#" },
+    { icon: faLinkedinIn, href: "https://in.linkedin.com/in/ahammed-binsid" },
+    { icon: faGithub, href: "https://github.com/binshid135" },
   ];
 
   return (
