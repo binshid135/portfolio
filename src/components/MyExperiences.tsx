@@ -17,7 +17,7 @@ const experiences = [
     period: "Jun 2024 – Dec 2024",
     description:
       "Developed full-stack web applications using the MERN stack. Integrated third-party APIs, optimized database queries (30% faster), and ensured responsive, scalable performance across devices.",
-    image: "/rissimage.png", // company logo/screenshot
+    image: "/riss_technologies_logo.jpeg", // company logo/screenshot
     skills: ["MongoDB", "Express.js", "React.js", "Node.js", "API Development"],
   },
 ];
