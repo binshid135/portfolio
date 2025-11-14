@@ -3,10 +3,10 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "2ndChanceFoods",
-    description: "SecondChanceFoods (June 2024 – September 2024) – A prison food production and management system designed to help manage and market food products made by inmates. I built features for user management, product orders, inventory, and delivery to streamline operations. The front end was developed with React for a responsive experience, while the backend used Node.js and MongoDB for scalability and reliable data storage.",
-    image: "/2ndchance.png",
-    link: "https://github.com/binshid135/2ndchancefoods",
+    title: "Shop House Al-ain",
+    description:"Shop House Al Ain is a local business in Al Ain, combining a restaurant and a household items store. I developed a full-stack website for them as a freelance project, using Next.js for both frontend and backend, Neon for the database, Cloudinary for image storage and optimization, and Vercel for serverless deployment. The website allows customers to explore the shop’s products and menu seamlessly, while providing a robust backend to manage content efficiently.",
+    image: "/shophouseimage.png",
+    link: "https://www.shophousealain.com",
   },
   {
     title: "Grabbzo Mobile App",
@@ -14,6 +14,12 @@ const projects = [
       "Grabbzo Mobile App – A smart dining app that helps users skip the wait by browsing restaurants, viewing menus, and placing orders for dine-in or pickup. Built with React Native CLI and TypeScript, featuring smooth navigation, state management, and API integrations, optimized for both iOS and Android.",
     image: "/grabbzo.png",
     link: "https://play.google.com/store/apps/details?id=com.grabbzo.customer&pcampaignid=web_share",
+  },
+  {
+    title: "2ndChanceFoods",
+    description: "SecondChanceFoods (June 2024 – September 2024) – A prison food production and management system designed to help manage and market food products made by inmates. I built features for user management, product orders, inventory, and delivery to streamline operations. The front end was developed with React for a responsive experience, while the backend used Node.js and MongoDB for scalability and reliable data storage.",
+    image: "/2ndchance.png",
+    link: "https://github.com/binshid135/2ndchancefoods",
   },
   {
     title: "Caramarkets Trading Platform",
