@@ -1,120 +1,55 @@
-import React from "react";
 import Image from "next/image";
 
 const experiences = [
   {
-    role: "React Native Developer Intern",
+    role: "Full Stack Developer",
+    company: "Al Yafour Construction",
+    period: "Apr 2026 – Present",
+    description: "Developing and maintaining construction-focused ERP software, including project-management workflows, internal business tools, scalable frontend and backend features, REST APIs, and database systems.",
+    image: "/structora.png",
+    imageClass: "object-cover",
+    skills: ["React", "Django", "REST APIs", "Databases", "ERP Systems"],
+  },
+  {
+    role: "React Native Developer",
     company: "Grabbzo",
     period: "Jan 2025 – Present",
-    description:
-      "Building and maintaining a food delivery platform with dedicated apps for restaurants and customers. Focused on smooth navigation, TypeScript-based state management, and API integrations while collaborating with designers and backend developers. Debugging and optimizing performance across iOS and Android.",
-    image: "/grabbzo.png", // company/app image
+    description: "Building and maintaining a food delivery platform with dedicated apps for restaurants and customers. Focused on smooth navigation, TypeScript-based state management, and API integrations while collaborating with designers and backend developers.",
+    image: "/grabbzo.png",
+    imageClass: "object-cover",
     skills: ["React Native CLI", "TypeScript", "API Integration", "Mobile UI/UX", "Next.js"],
   },
   {
-    role: "MERN Stack Developer Intern",
+    role: "MERN Stack Developer",
     company: "Riss Technologies",
     period: "Jun 2024 – Dec 2024",
-    description:
-      "Developed full-stack web applications using the MERN stack. Integrated third-party APIs, optimized database queries (30% faster), and ensured responsive, scalable performance across devices.",
-    image: "/riss_technologies_logo.jpeg", // company logo/screenshot
+    description: "Developed full-stack web applications using the MERN stack. Integrated third-party APIs, optimized database queries, and ensured responsive, scalable performance across devices.",
+    image: "/riss_technologies_logo.jpeg",
+    imageClass: "object-contain p-7",
     skills: ["MongoDB", "Express.js", "React.js", "Node.js", "API Development"],
   },
 ];
 
-const MyExperiences = () => (
-  <section className="flex-1 px-6 md:px-12 lg:px-20 py-16 md:py-20 max-w-7xl mx-auto">
-    {/* Heading */}
-    <div className="text-center md:text-left">
-      <h2 className="text-5xl md:text-7xl text-black font-extrabold mb-6 tracking-tight leading-tight">
-        Professional <br className="hidden sm:inline" /> Experiences
-      </h2>
-      <hr className="border-t-4 border-gray-300 mb-6 w-full max-w-4xl mx-auto md:mx-0" />
-      <p className="text-gray-700 text-lg md:text-xl lg:text-2xl max-w-4xl mx-auto md:mx-0 leading-relaxed mb-12">
-        My journey of building scalable, high-impact applications — and learning fast along the way.
-      </p>
+export default function MyExperiences() {
+  return <section className="section-shell py-20 md:py-28">
+    <div className="mb-12 max-w-2xl">
+      <p className="eyebrow mb-3">Career journey</p>
+      <h2 className="display text-4xl font-extrabold md:text-5xl">Where I&apos;ve <span className="text-[#a6c343]">worked</span></h2>
+      <p className="mt-5 leading-7 text-[#626673]">My journey of building scalable, high-impact applications — and learning fast along the way.</p>
     </div>
-
-    {/* Experience Timeline Style */}
-    <div className="space-y-16 md:space-y-24 relative">
-      {experiences.map((exp, idx) => (
-        <div
-          key={idx}
-          className={`flex flex-col ${idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-            } items-center gap-8`}
-        >
-          {/* Image with gradient border */}
-          <div className="flex-1 w-full max-w-md">
-            <div className="relative aspect-video rounded-2xl overflow-hidden border-4 border-transparent bg-gradient-to-tr from-gray-200 via-gray-100 to-gray-50 p-[2px] shadow-xl hover:scale-[1.02] transition-transform duration-300">
-              <div className="w-full h-full rounded-2xl overflow-hidden">
-                <Image
-                  src={exp.image}
-                  alt={exp.company}
-                  fill
-                  className="object-contain rounded-2xl"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Text Content */}
-          <div className="flex-1 text-center md:text-left">
-            <h3 className="text-3xl font-bold text-black mb-2">{exp.role}</h3>
-            <p className="text-gray-600 text-lg mb-3 font-medium">
-              {exp.company} · {exp.period}
-            </p>
-            <p className="text-gray-700 text-base md:text-lg mb-4">
-              {exp.description}
-            </p>
-
-            {/* Skills / Tech Badges */}
-            <div className="flex flex-wrap justify-center md:justify-start gap-2 mt-4">
-              {exp.skills.map((skill, i) => (
-                <span
-                  key={i}
-                  className="px-3 py-1 text-sm bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full shadow-sm"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
+    <div className="grid gap-6">
+      {experiences.map((exp, index) => <article key={exp.company} className="grid overflow-hidden rounded-2xl border border-black/10 bg-white md:grid-cols-[260px_1fr]">
+        <div className="relative min-h-52 bg-[#f0f3e4] md:min-h-full">
+          <Image src={exp.image} alt={`${exp.company} project`} fill sizes="(max-width: 768px) 100vw, 260px" className={exp.imageClass} />
         </div>
-      ))}
+        <div className="p-6 md:p-8">
+          <p className="text-sm font-bold text-[#769719]">{String(index + 1).padStart(2, "0")} / {exp.period}</p>
+          <h3 className="display mt-2 text-2xl font-extrabold">{exp.role}</h3>
+          <p className="mt-1 font-semibold">{exp.company}</p>
+          <p className="mt-5 max-w-3xl text-sm leading-6 text-[#626673]">{exp.description}</p>
+          <div className="mt-5 flex flex-wrap gap-2">{exp.skills.map(skill => <span key={skill} className="rounded-full bg-[#eef5d4] px-3 py-1.5 text-xs font-semibold text-[#4f6910]">{skill}</span>)}</div>
+        </div>
+      </article>)}
     </div>
-
-    {/* Call to Action */}
-    <div className="mt-20 text-center">
-      <p className="text-xl md:text-2xl font-semibold text-gray-800 mb-6">
-        🚀 Open to exciting opportunities — let’s build something amazing together!
-      </p>
-
-      {/* Contact Info */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
-        <a
-          href="mailto:ahmedbinshid@gmail.com"
-          className="text-lg font-medium text-black hover:underline"
-        >
-          📧 ahmedbinshid@gmail.com
-        </a>
-        <a
-          href="tel:+971508493690"
-          className="text-lg font-medium text-black hover:underline"
-        >
-          📱 +971 50 849 3690
-        </a>
-      </div>
-
-      {/* Hire Me Button */}
-      <a
-        href="mailto:ahmedbinshid@gmail.com"
-        className="mt-6 inline-block px-6 py-3 text-lg font-bold rounded-full bg-black text-white hover:bg-gray-800 transition"
-      >
-        Hire Me →
-      </a>
-    </div>
-
-  </section>
-);
-
-export default MyExperiences;
+  </section>;
+}
